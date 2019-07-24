@@ -1,0 +1,276 @@
+.single-supplier {
+	background: url('../img/bkgr_map.png') center top no-repeat;
+	background-attachment: fixed;
+}
+.supplier-wrapper {
+	font-family: 'Montserrat', sans-serif;
+	color: #4D4D4D;
+}
+.supplier-wrapper h1,
+.supplier-wrapper h2,
+.supplier-wrapper h3,
+.supplier-wrapper h4,
+.supplier-wrapper h5,
+.supplier-wrapper h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+.supplier-wrapper p,
+.supplier-wrapper span {
+	font-family: 'Raleway', sans-serif;
+}
+.supplier-wrapper h3 {
+	font-size: 1.75rem;
+}
+.supplier-wrapper h6 {
+	max-width: 160px;
+	padding: 0 1rem;
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: #404248;;
+}
+
+/* Supplier Header */
+.supplier-wrapper .supplier-logo {
+	max-width: 200px;
+	width: 100%;;
+}
+.supplier-name::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.supplier-name span {
+	position: relative;
+	float: left;
+	padding: 3px 10px;
+}
+.supplier-name span:not(.supplier-title) {
+	line-height: 1.4;
+}
+.supplier-name span::after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 80%;
+	width: 2px;
+	top: 10%;
+	right: -1px;
+	background: #404248;
+}
+.supplier-name span:last-child::after {
+	width: 0;
+}
+.supplier-name span.ship-flags {
+	font-size: 16px;
+	line-height: 26px;
+}
+.supplier-name .ship-flags img {
+	width: 24px;
+}
+.supplier-name .ship-flags i {
+	font-size: 24px;
+	vertical-align: middle;
+}
+.supplier-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.supplier-title mark {
+	padding: 0.2rem 0.3rem;
+	color: #fff;
+	background-color: #0089D9;
+}
+.supplier-wrapper .warehouse-location span,
+.supplier-wrapper .warehouse-location li {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+}
+.supplier-wrapper .warehouse-location ul {
+	margin: 0;
+}
+.supplier-wrapper .warehouse-location li:first-child {
+	padding-top: 4px;
+}
+.supplier-wrapper .warehouse-location a {
+	display: inline-block;
+	margin-top: 5px;
+	font-weight: 600;
+	color: #262626;
+	text-decoration: underline;
+}
+.supplier-map {	
+	position: relative;
+	height: 0;
+	margin-top: 4px;
+	padding-bottom: 56.25%;
+	border: 1px solid #404248;
+	overflow: hidden;
+}
+.supplier-map iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	padding: 5px;
+}
+.supplier-wrapper .partner-badge {
+	position: absolute;
+	right: 1.5rem;
+}
+.supplier-wrapper .partner-badge img {
+	max-width: 60px;
+	width: 100%;
+}
+
+/* Supplier About */
+.supplier-about .card-body {
+	font-size: 1.25rem;
+}
+/* .supplier-about .fa-check {
+	color: #008ADD;
+}
+.supplier-about .fa-times {
+	color: #404248;
+} */
+.supplier-features .card-bkgr {
+	background-color: #0089D9;
+}
+.supplier-features .card-bkgr .fa-check {
+	color: #fff;
+}
+.supplier-features .card-bkgr .fa-times {
+	color: #404248;
+}
+.supplier-features .card-title {
+	color: #4D4D4D;
+}
+.supplier-features .card-bkgr .card-title {
+	color: #fff;
+}
+.supplier-features .card:first-child,
+.supplier-features .card:first-child .card-body {
+	border-top-left-radius: 0.5rem;
+}
+.supplier-features .card:last-child,
+.supplier-features .card:last-child .card-body {
+	border-top-right-radius: 0.5rem;
+}
+.supplier-policies .card:first-child,
+.supplier-policies .card:first-child .card-body {
+	border-bottom-left-radius: 0.5rem;
+}
+.supplier-policies .card:last-child,
+.supplier-policies .card:last-child .card-body {
+	border-bottom-right-radius: 0.5rem;
+}
+.supplier-about .card-button {
+	padding: 0.5rem;
+	border-top: 1px solid rgba(0,0,0,.125);
+	text-align: center;
+}
+.supplier-about .card-button a {
+	font-size: 16px;
+	font-weight: 500;
+	background-color: #0089D9;
+}
+.supplier-policies a {
+	font-weight: 500;
+	color: #0089D9;
+}
+
+/* Supplier Integration */
+.supplier-integration .integrations_table {
+	margin-top: 0;
+}
+.supplier-banners .card-link {
+	font-family: Ruda;
+	font-size: 18px;
+	color: #404248;
+}
+.supplier-wrapper .supplier-banners img {
+	max-width: 4rem;
+	padding-bottom: 1rem;
+}
+
+/* Supplier Community */
+.supplier-community .nav-link {
+	height: 100%;
+	/* padding-bottom: 0; */
+	font-family: Ruda;
+  font-size: 1.5rem;
+  color: #404248;
+}
+.supplier-community .nav-link.icon-facebook {
+  color: #4267B2;
+}
+.supplier-community .nav-link.icon-twitter {
+  color: #1DA1F2;
+}
+.supplier-community .nav-link.icon-youtube {
+  color: #FF0000;
+}
+.supplier-community .nav-link.icon-instagram {
+  color: #A837B0;
+}
+.supplier-community .supplier-reviews-item {
+	position: relative;
+}
+.supplier-community .supplier-reviews-item::after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 60%;
+	width: 2px;
+	top: 20%;
+	right: -1px;
+	background: #404248;
+}
+.supplier-community .supplier-reviews-item:last-child::after {
+	display: none;
+}
+/* Supplier Dropshippers Reviews */
+.supplier-reviews p {
+	font-weight: 600;
+}
+
+@media (min-width: 576px) {
+	.supplier-features .card-deck {
+		-ms-flex-flow: column nowrap;
+		flex-flow: column nowrap;
+		
+	}
+}
+@media (min-width: 768px) {
+	.supplier-features .card-deck {
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		
+	}
+}
+@media (max-width: 767px) {
+	.single-supplier {
+		background-attachment: scroll;
+	}
+	.supplier-features .card-deck .card {
+		margin-bottom: 2.5rem;
+	}
+	.supplier-features .card:first-child,
+	.supplier-features .card:first-child .card-body {
+		border-top-left-radius: 0;
+	}
+	.supplier-features .card:last-child,
+	.supplier-features .card:last-child .card-body {
+		border-top-right-radius: 0;
+	}
+	.supplier-policies .card:first-child,
+	.supplier-policies .card:first-child .card-body {
+		border-bottom-left-radius: 0.25rem;
+	}
+	.supplier-policies .card:last-child,
+	.supplier-policies .card:last-child .card-body {
+		border-bottom-right-radius: 0.25rem;
+	}
+}
