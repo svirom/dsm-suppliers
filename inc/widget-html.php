@@ -193,7 +193,8 @@ $supplier_indexed = array_slice($supplier_shipping, 0);
       <div class="card-deck">
         <?php 
         if ( $supplier_shipButton === 'yes' ) { ?>
-        <div class="card">
+        <div class="card card-policy">
+          <img class="mx-auto" src="<?php echo plugin_dir_url( __DIR__ );?>img/icon-shipping.png" alt="Shipping policy image">
           <div class="card-body text-center">
             <a href="<?php echo $supplier_ship['url']; ?>" class="card-link" <?php echo $supplier_targetShipping; ?> <?php echo $supplier_nofollowShipping; ?>>Shipping Policy</a>
           </div>
@@ -201,7 +202,8 @@ $supplier_indexed = array_slice($supplier_shipping, 0);
         <?php } ?>	
         <?php
         if ( $supplier_returnButton === 'yes' ) { ?>		
-        <div class="card">
+        <div class="card card-policy">
+          <img class="mx-auto" src="<?php echo plugin_dir_url( __DIR__ );?>img/icon-return.png" alt="Return policy image">
           <div class="card-body text-center">
           <a href="<?php echo $supplier_return['url']; ?>" class="card-link" <?php echo $supplier_targetReturn; ?> <?php echo $supplier_nofollowReturn; ?>>Return Policy</a>
           </div>
@@ -209,7 +211,8 @@ $supplier_indexed = array_slice($supplier_shipping, 0);
         <?php } ?>		
         <?php
         if ( $supplier_paymentButton === 'yes' ) { ?>		
-        <div class="card">
+        <div class="card card-policy">
+          <img class="mx-auto" src="<?php echo plugin_dir_url( __DIR__ );?>img/icon-payment.png" alt="Payment policy image">
           <div class="card-body text-center">
           <a href="<?php echo $supplier_payment['url']; ?>" class="card-link" <?php echo $supplier_targetPayment; ?> <?php echo $supplier_nofollowPayment; ?>>Payment Methods</a>
           </div>
