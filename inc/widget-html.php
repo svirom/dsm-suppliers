@@ -454,11 +454,11 @@ $supplier_indexed = array_slice($supplier_shipping, 0);
 
   </div>
 
-  <!-- Community Section -->
+  <!-- Banner Section -->
   <div class="supplier-banner row mt-2 mt-sm-5">
     <div class="col-12">
       <a href="http://www.dsmtool.com?utm_campaign=suppliers_directory" target="_blank">
-        <img src="<?php echo plugin_dir_url( __DIR__ );?>img/partner-banner.jpg" alt="Banner" title="Go to DSM Tool">
+        <img src="<?php echo plugin_dir_url( __DIR__ );?>img/partner-banner1200.jpg" alt="Banner" title="Go to DSM Tool">
       </a>
     </div>
   </div>
