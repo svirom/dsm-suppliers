@@ -104,168 +104,91 @@ $supplier_indexed = array_slice($supplier_shipping, 0);
     </div>
 
     <div class="col-12 supplier-features">
-      <!-- <div class="card-deck align-items-md-start">
-        <div class="card bg-light">
-          <div class="card-body text-center <?php echo $supplier_program ? 'card-bkgr' : ''; ?>">
-            <h5 class="card-title">
-              <?php echo $supplier_program ? 'Dropshipping Program' : "$supplier_name does not offer a Dropshipping Program"; ?>
-            </h5>
-            <p class="card-text">
-              <?php
-              if ( $supplier_program === 'yes') { ?>
-                <i class="fas fa-check"></i>
-              <?php } else { ?>
-                <i class="fas fa-times"></i>
-              <?php } ?>
-            </p>
+      <div class="card-deck align-items-md-start">
+        <div class="card border-0">
+          <div class="card-wrapper">
+            <div class="card-body text-center pt-4">
+              <span class="features-check <?php echo $supplier_program ? 'card-bkgr' : ''; ?>">
+                <?php
+                if ( $supplier_program === 'yes') { ?>
+                  <i class="fas fa-check"></i>
+                <?php } else { ?>
+                  <i class="fas fa-times"></i>
+                <?php } ?>
+              </span>
+              <h5 class="card-title">
+                <?php echo $supplier_program ? 'Dropshipping Program' : "$supplier_name does not offer a Dropshipping Program"; ?>
+              </h5>
+            </div>
+            <?php
+            if ( $supplier_program === 'yes') { ?>
+            <div class="card-footer">
+              <p class="card-text"><?php echo $supplier_programTextarea; ?></p>
+            </div>
+            <?php } ?>
           </div>
-          <?php
-          if ( $supplier_program === 'yes') { ?>
-          <div class="card-footer">
-            <p class="card-text"><?php echo $supplier_programTextarea; ?></p>
-          </div>
-          <?php } ?>
           <?php
           if ( $supplier_programButton === 'yes') { ?>
           <div class="card-button">
-            <a href="<?php echo $supplier_programButtonLink; ?>" class="btn btn-primary btn-sm" target="_blank"><?php echo $supplier_programButtonText; ?></a>
+            <a href="<?php echo $supplier_programButtonLink; ?>" class="btn btn-primary btn-lg" target="_blank"><?php echo $supplier_programButtonText; ?></a>
           </div>
           <?php } ?>
         </div>
-        <div class="card bg-light">
-          <div class="card-body text-center <?php echo $supplier_reseller ? 'card-bkgr' : ''; ?>">
-            <h5 class="card-title">
-              <?php echo $supplier_reseller ? 'Reseller Agreement' : "No information available about re-sell agreement from $supplier_name"; ?>
-            </h5>
-            <p class="card-text">
-              <?php
-              if ( $supplier_reseller === 'yes') { ?>
-                <i class="fas fa-check"></i>
-              <?php } else { ?>
-                <i class="fas fa-times"></i>
-              <?php } ?>
-            </p>
+        <div class="card border-0">
+          <div class="card-wrapper">
+            <div class="card-body text-center pt-4">
+              <span class="features-check <?php echo $supplier_reseller ? 'card-bkgr' : ''; ?>">
+                <?php
+                if ( $supplier_reseller === 'yes') { ?>
+                  <i class="fas fa-check"></i>
+                <?php } else { ?>
+                  <i class="fas fa-times"></i>
+                <?php } ?>
+              </span>
+              <h5 class="card-title">
+                <?php echo $supplier_reseller ? 'Reseller Agreement' : "No information available about re-sell agreement from $supplier_name"; ?>
+              </h5>
+            </div>
+            <?php
+            if ( $supplier_reseller === 'yes') { ?>
+            <div class="card-footer">
+              <p class="card-text"><?php echo $supplier_resellerTextarea; ?></p>
+            </div>
+            <?php } ?>
           </div>
-          <?php
-          if ( $supplier_reseller === 'yes') { ?>
-          <div class="card-footer">
-            <p class="card-text"><?php echo $supplier_resellerTextarea; ?></p>
-          </div>
-          <?php } ?>
           <?php
           if ( $supplier_resellerButton === 'yes') { ?>
           <div class="card-button">
-            <a href="<?php echo $supplier_resellerButtonLink; ?>" class="btn btn-primary btn-sm" target="_blank"><?php echo $supplier_resellerButtonText; ?></a>
+            <a href="<?php echo $supplier_resellerButtonLink; ?>" class="btn btn-primary btn-lg" target="_blank"><?php echo $supplier_resellerButtonText; ?></a>
           </div>
           <?php } ?>
         </div>
-        <div class="card bg-light">
-          <div class="card-body text-center <?php echo $supplier_packaging ? 'card-bkgr' : ''; ?>">
-            <h5 class="card-title">
-              <?php echo $supplier_packaging ? 'Dropship Packaging' : "No information available about packages from $supplier_name"; ?>
-            </h5>
-            <p class="card-text">
-              <?php
-              if ( $supplier_packaging === 'yes') { ?>
-                <i class="fas fa-check"></i>
-              <?php } else { ?>
-                <i class="fas fa-times"></i>
-              <?php } ?>
-            </p>
+        <div class="card border-0">
+          <div class="card-wrapper">
+            <div class="card-body text-center pt-4">
+              <span class="features-check <?php echo $supplier_packaging ? 'card-bkgr' : ''; ?>">
+                <?php
+                if ( $supplier_packaging === 'yes') { ?>
+                  <i class="fas fa-check"></i>
+                <?php } else { ?>
+                  <i class="fas fa-times"></i>
+                <?php } ?>
+              </span>
+              <h5 class="card-title">
+                <?php echo $supplier_packaging ? 'Dropship Packaging' : "No information available about packages from $supplier_name"; ?>
+              </h5>
+            </div>
+            <?php
+            if ( $supplier_packaging === 'yes') { ?>
+            <div class="card-footer">
+              <p class="card-text"><?php echo $supplier_packagingTextarea; ?></p>
+            </div>
+            <?php } ?>
           </div>
-          <?php
-          if ( $supplier_packaging === 'yes') { ?>
-          <div class="card-footer">
-            <p class="card-text"><?php echo $supplier_packagingTextarea; ?></p>
-          </div>
-          <?php } ?>
           <?php
           if ( $supplier_packagingButton === 'yes') { ?>
           <div class="card-button">
-            <a href="<?php echo $supplier_packagingButtonLink; ?>" class="btn btn-primary btn-sm" target="_blank"><?php echo $supplier_packagingButtonText; ?></a>
-          </div>
-          <?php } ?>
-        </div>
-      </div> -->
-      <div class="card-group align-items-md-start">
-        <div class="card border-0">
-          <div class="card-body text-center pt-4">
-            <span class="features-check <?php echo $supplier_program ? 'card-bkgr' : ''; ?>">
-              <?php
-              if ( $supplier_program === 'yes') { ?>
-                <i class="fas fa-check"></i>
-              <?php } else { ?>
-                <i class="fas fa-times"></i>
-              <?php } ?>
-            </span>
-            <h5 class="card-title">
-              <?php echo $supplier_program ? 'Dropshipping Program' : "$supplier_name does not offer a Dropshipping Program"; ?>
-            </h5>
-          </div>
-          <?php
-          if ( $supplier_program === 'yes') { ?>
-          <div class="card-footer">
-            <p class="card-text"><?php echo $supplier_programTextarea; ?></p>
-          </div>
-          <?php } ?>
-          <?php
-          if ( $supplier_programButton === 'yes') { ?>
-          <div class="card-button">
-            <a href="<?php echo $supplier_programButtonLink; ?>" class="btn btn-primary btn-sm" target="_blank"><?php echo $supplier_programButtonText; ?></a>
-          </div>
-          <?php } ?>
-        </div>
-        <div class="card border-0">
-          <div class="card-body text-center pt-4">
-            <span class="features-check <?php echo $supplier_reseller ? 'card-bkgr' : ''; ?>">
-              <?php
-              if ( $supplier_reseller === 'yes') { ?>
-                <i class="fas fa-check"></i>
-              <?php } else { ?>
-                <i class="fas fa-times"></i>
-              <?php } ?>
-            </span>
-            <h5 class="card-title">
-              <?php echo $supplier_reseller ? 'Reseller Agreement' : "No information available about re-sell agreement from $supplier_name"; ?>
-            </h5>
-          </div>
-          <?php
-          if ( $supplier_reseller === 'yes') { ?>
-          <div class="card-footer">
-            <p class="card-text"><?php echo $supplier_resellerTextarea; ?></p>
-          </div>
-          <?php } ?>
-          <?php
-          if ( $supplier_resellerButton === 'yes') { ?>
-          <div class="card-button">
-            <a href="<?php echo $supplier_resellerButtonLink; ?>" class="btn btn-primary btn-sm" target="_blank"><?php echo $supplier_resellerButtonText; ?></a>
-          </div>
-          <?php } ?>
-        </div>
-        <div class="card border-0">
-          <div class="card-body text-center pt-4">
-            <span class="features-check <?php echo $supplier_packaging ? 'card-bkgr' : ''; ?>">
-              <?php
-              if ( $supplier_packaging === 'yes') { ?>
-                <i class="fas fa-check"></i>
-              <?php } else { ?>
-                <i class="fas fa-times"></i>
-              <?php } ?>
-            </span>
-            <h5 class="card-title">
-              <?php echo $supplier_packaging ? 'Dropship Packaging' : "No information available about packages from $supplier_name"; ?>
-            </h5>
-          </div>
-          <?php
-          if ( $supplier_packaging === 'yes') { ?>
-          <div class="card-footer">
-            <p class="card-text"><?php echo $supplier_packagingTextarea; ?></p>
-          </div>
-          <?php } ?>
-          <?php
-          if ( $supplier_packagingButton === 'yes') { ?>
-          <div class="card-button">
-            <a href="<?php echo $supplier_packagingButtonLink; ?>" class="btn btn-primary btn-sm" target="_blank"><?php echo $supplier_packagingButtonText; ?></a>
+            <a href="<?php echo $supplier_packagingButtonLink; ?>" class="btn btn-primary btn-lg" target="_blank"><?php echo $supplier_packagingButtonText; ?></a>
           </div>
           <?php } ?>
         </div>

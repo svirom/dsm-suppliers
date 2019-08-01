@@ -129,48 +129,16 @@
 .supplier-about .card-body {
 	font-size: 1.25rem;
 }
-/* .supplier-about .fa-check {
-	color: #008ADD;
-}
-.supplier-about .fa-times {
-	color: #404248;
-} */
-/* .supplier-features .card-bkgr {
-	background-color: #0089D9;
-}
-.supplier-features .card-bkgr .fa-check {
-	color: #fff;
-}
-.supplier-features .card-bkgr .fa-times {
-	color: #404248;
-}
-.supplier-features .card-title {
-	color: #4D4D4D;
-}
-.supplier-features .card-bkgr .card-title {
-	color: #fff;
-} */
-/* .supplier-features .card:first-child,
-.supplier-features .card:first-child .card-body {
-	border-top-left-radius: 0.5rem;
-}
-.supplier-features .card:last-child,
-.supplier-features .card:last-child .card-body {
-	border-top-right-radius: 0.5rem;
-}
-.supplier-policies .card:first-child,
-.supplier-policies .card:first-child .card-body {
-	border-bottom-left-radius: 0.5rem;
-}
-.supplier-policies .card:last-child,
-.supplier-policies .card:last-child .card-body {
-	border-bottom-right-radius: 0.5rem;
-} */
+
 .supplier-features {
 	padding-bottom: 2rem;
 }
-.supplier-features .card-group {
+.supplier-features .card {
+	background-color: transparent;
+}
+.supplier-features .card-wrapper {
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
 }
 .supplier-features .features-check {
 	display: inline-block;
@@ -195,18 +163,18 @@
 	margin-top: 1.5rem;
 }
 .supplier-features .card-footer {
-	padding: .75rem 1.25rem;
+	padding: .75rem 1.25rem 1.25rem;
   background-color: #ffffff;;
   border-top: 0;
 }
 .supplier-about .card-button {
+	margin-top: 1.5rem;
 	padding: 0.5rem;
-	border-top: 1px solid rgba(0,0,0,.125);
 	text-align: center;
 }
 .supplier-about .card-button a {
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 600;
 	background-color: #0089D9;
 }
 .supplier-policies .card-policy {
@@ -225,7 +193,6 @@
 	color: #ffffff;
 	text-transform: uppercase;
 	background: #333333;
-	
 }
 .supplier-policies a:hover,
 .supplier-policies a:focus {
@@ -250,7 +217,6 @@
 /* Supplier Community */
 .supplier-community .nav-link {
 	height: 100%;
-	/* padding-bottom: 0; */
 	font-family: Ruda;
   font-size: 1.5rem;
   color: #404248;
@@ -283,6 +249,7 @@
 .supplier-community .supplier-reviews-item:last-child::after {
 	display: none;
 }
+
 /* Supplier Dropshippers Reviews */
 .supplier-reviews p {
 	font-weight: 600;
@@ -324,20 +291,4 @@
 	.supplier-features .card-deck .card {
 		margin-bottom: 2.5rem;
 	}
-	/* .supplier-features .card:first-child,
-	.supplier-features .card:first-child .card-body {
-		border-top-left-radius: 0;
-	}
-	.supplier-features .card:last-child,
-	.supplier-features .card:last-child .card-body {
-		border-top-right-radius: 0;
-	}
-	.supplier-policies .card:first-child,
-	.supplier-policies .card:first-child .card-body {
-		border-bottom-left-radius: 0.25rem;
-	}
-	.supplier-policies .card:last-child,
-	.supplier-policies .card:last-child .card-body {
-		border-bottom-right-radius: 0.25rem;
-	} */
 }
