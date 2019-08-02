@@ -24,36 +24,46 @@ $supplier_indexed = array_slice($supplier_shipping, 0);
 							</h5>
 						</div>
 					</div>
-					<div class="row">
+					
+          <?php if ( $supplier_cat ) { ?>
+          <div class="row">
 						<div class="col-md-12">
 							<h5 class="supplier-name mb-3 mb-md-0">
-								<?php if ( $supplier_cat ) {
-									foreach ( $supplier_cat as $category ) { ?>
-									<span><?php echo $category; ?></span> 
-								<?php } } ?>
-							</h5>
+                <span class="supplier-subtitle">Category: </span>
+                <?php foreach ( $supplier_cat as $categoryId => $category ) { ?>
+                <span><?php printf(
+                    '<a href="%1$s">%2$s</a>',
+                    get_category_link($categoryId),
+                    $category
+                ); ?></span>
+                <?php } ?>
+              </h5>
 						</div>
-					</div>
+					</div> 
+          <?php } ?>
+							
           <div class="row mt-3">
             <div class="col-md-12">
               <h5 class="supplier-name mb-3 mb-md-0">
-                <span>Ships to: </span>
+                
+              <?php if ( $supplier_indexed ) { ?>
+                <span class="supplier-subtitle">Ships to: </span>
                 <span class="ship-flags">
-                <?php if ( $supplier_indexed ) {
-                  foreach ( $supplier_indexed as $shipping ) { ?>
-                    <?php 
-                    if ($shipping == 'worldwide') { ?>
+                <?php foreach ( $supplier_indexed as $shipping ) { ?>
+                  <?php 
+                  if ($shipping == 'worldwide') { ?>
 
-                    <i class="fas fa-globe-americas"></i>
+                  <i class="fas fa-globe-americas"></i>
 
-                    <?php } else { ?>
+                  <?php } else { ?>
 
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/inc/landingPage/imgs/flag_<?php echo $shipping;?>.png" alt="Icon">
-                    
-                <?php } 
-                  } 
+                  <img src="<?php echo get_stylesheet_directory_uri();?>/inc/landingPage/imgs/flag_<?php echo $shipping;?>.png" alt="Icon">
+                  
+              <?php } 
                 } ?>
                 </span> 
+              <?php } ?>
+                
               </h5>
             </div>
           </div>

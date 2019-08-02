@@ -48,6 +48,9 @@
 .supplier-name span:not(.supplier-title) {
 	line-height: 1.4;
 }
+.supplier-name .supplier-subtitle {
+	text-decoration: underline;
+}
 .supplier-name span::after {
 	content: '';
 	position: absolute;
@@ -58,7 +61,8 @@
 	right: -1px;
 	background: #404248;
 }
-.supplier-name span:last-child::after {
+.supplier-name span:last-child::after,
+.supplier-name span.supplier-subtitle::after {
 	width: 0;
 }
 .supplier-name span.ship-flags {
