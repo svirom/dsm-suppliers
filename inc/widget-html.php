@@ -485,7 +485,7 @@ $supplier_indexed = array_slice($supplier_shipping, 0);
       <!-- <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
       <div class="fb-comments" data-href="http://dsm.newsroom.local/" data-width="100%" data-numposts="5"></div> -->
-      <?php echo do_shortcode('[gs-fb-comments]'); ?>
+      <?php echo do_shortcode('[dsm-wpdiscuz-comments]'); ?>
     </div>
 
   </div>

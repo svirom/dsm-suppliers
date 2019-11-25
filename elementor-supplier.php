@@ -26,7 +26,9 @@ class ElementorSupplier {
 	}
 
 	public function widget_styles() {
-	 	wp_enqueue_style( 'elementor-supplier', plugins_url( 'css/style.css', __FILE__ ), array() );
+        if ( is_page() ) {
+            wp_enqueue_style( 'elementor-supplier', plugins_url( 'css/style.css', __FILE__ ), array() );
+        }
 	}
 
 	private function include_widgets_files() {
